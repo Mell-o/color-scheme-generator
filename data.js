@@ -5,6 +5,6 @@ export const schemeModes = [
     "Analogic",
     "Complement",
     "Analogic-complement",
-    "triad",
-    "quad",
+    "Triad",
+    "Quad",
 ]
