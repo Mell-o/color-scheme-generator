@@ -1,4 +1,52 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* =================
+    Main content
+   ================= */
+
 html, body {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =================
+    Grid container
+   ================= */
+
+main {
+    display: grid;
+    justify-content: center;
+    border: 1px red dotted;
+}
+
+/* =================
+    Form container
+   ================= */
+
+form {
+    display: flex;
+    margin: 23px 14px 25px 15px;
+    column-gap: 12px;
+}
+
+form > * {
+    height: 42px;
+}
+
+button {
+    width: 123px;
+}
+
+input {
+    width: 61px;
+    margin: 0 auto;
+}
+
+select {
+    width: 312px;
 }
