@@ -36,10 +36,17 @@ form {
 
 form > * {
     height: 42px;
+    border: 1px solid #D1D5DB;
+}
+
+button, input, select {
+    cursor: pointer;
 }
 
 button {
     width: 123px;
+    border-radius: 4px;
+    background-color: white;
 }
 
 input {
@@ -47,6 +54,38 @@ input {
     margin: 0 auto;
 }
 
+select, ::picker(select) {
+  appearance: base-select;
+}
+
+select::picker-icon {
+    color: #9CA3AF;
+}
+
 select {
     width: 312px;
+    border-radius: 6px;
+    padding-left: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::picker(select) {
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  margin-top: 4px;
+}
+
+option {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 12px 8px;
+}
+
+option::checkmark {
+    order: 1;
+    margin-left: auto;
+    color: indigo;
 }
