@@ -47,9 +47,15 @@ function loadColors(requestURL){
 }
 
 function displayColors(colors){
+    for (let i = 0; i < 5; i++){
+        document.getElementById(`color${i + 1}`).style.backgroundColor = colors[i]
+    }
 }
 
 function displayHexes(colors){
+    for (let i = 0; i < 5; i++){
+        document.getElementById(`hex${i + 1}`).innerText = `#${colors[i]}`
+    }
 }
 
 
