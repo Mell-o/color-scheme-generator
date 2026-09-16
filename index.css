@@ -21,11 +21,11 @@ html, body {
 main {
     display: grid;
     justify-content: center;
-    border: 1px red dotted;
+    border: 1px lightgrey solid;
 }
 
 /* =================
-    Form container
+    Scheme Controls
    ================= */
 
 form {
@@ -88,4 +88,56 @@ option::checkmark {
     order: 1;
     margin-left: auto;
     color: indigo;
+}
+
+/* =================
+    Scheme List
+   ================= */
+
+ul, li {
+    width: 100%;
+}
+
+ul, .hex-label {
+    display: flex;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    width: 20%;
+}
+
+.color-swatch {
+    height: 414px;
+}
+
+.hex-label {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+}
+
+#color1 {
+    background-color: #F55A5A;
+}
+
+#color2 {
+    background-color: #2B283A;
+}
+#color3 {
+    background-color: #FBF3AB;
+}
+
+#color4 {
+    background-color: #AAD1B6;
+}
+
+#color5 {
+    background-color: #A626D3;
 }
