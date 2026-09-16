@@ -12,6 +12,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 /* =================
@@ -20,18 +21,29 @@ html, body {
 
 main {
     display: grid;
-    justify-content: center;
     border: 1px lightgrey solid;
+    grid-template-rows: 10% 90%;
+    width: 100%;
+    height: 100%;
 }
 
 /* =================
     Scheme Controls
    ================= */
 
-form {
+form, select, option {
     display: flex;
-    margin: 23px 14px 25px 15px;
-    column-gap: 12px;
+}
+
+form, select {
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    gap: 0 12px;
+    margin: 0;
+    padding: 0 14px;
 }
 
 form > * {
@@ -44,13 +56,13 @@ button, input, select {
 }
 
 button {
-    width: 123px;
+    width: 17%;
     border-radius: 4px;
     background-color: white;
 }
 
 input {
-    width: 61px;
+    width: 8%;
     margin: 0 auto;
 }
 
@@ -63,12 +75,9 @@ select::picker-icon {
 }
 
 select {
-    width: 312px;
+    width: 75%;
     border-radius: 6px;
     padding-left: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 ::picker(select) {
@@ -79,8 +88,6 @@ select {
 }
 
 option {
-    display: flex;
-    align-items: center;
     padding: 8px 16px 12px 8px;
 }
 
@@ -93,10 +100,6 @@ option::checkmark {
 /* =================
     Scheme List
    ================= */
-
-ul, li {
-    width: 100%;
-}
 
 ul, .hex-label {
     display: flex;
@@ -113,14 +116,14 @@ li {
 }
 
 .color-swatch {
-    height: 414px;
+    height: 92%;
 }
 
 .hex-label {
     margin: 0;
     justify-content: center;
     align-items: center;
-    height: 46px;
+    height: 8%;
 }
 
 #color1 {
