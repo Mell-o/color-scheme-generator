@@ -2,7 +2,6 @@ import {schemeModes} from "./data.js"
 
 const schemeModesSelect = document.querySelector('.scheme-modes-select')
 const myForm = document.querySelector("form")
-let colors = []
 
 
 function addSchemeModes(schemeModes){
@@ -23,9 +22,11 @@ myForm.addEventListener("submit", (event) => {
 
     const requestURL = getRequestURL(schemeFormData.hex, schemeFormData.mode)
 
-    fetchColors(requestURL)
-    displayColors(colors)
-    displayHexes(colors)
+    fetchColors(requestURL).then(colors => {
+        displayColors(colors)
+        displayHexes(colors)
+    })
+
 })
 
 function getRequestURL(hex, mode){
@@ -41,11 +42,12 @@ function fetchColors(requestURL){
     return fetch(requestURL)
         .then(response => response.json())
         .then(data => {
-            colors = data.colors.map(({ hex: { clean } }) => clean)
+            return data.colors.map(({ hex: { clean } }) => clean)
         })
 }
 
 function displayColors(colors){
+    console.log(colors)
     for (let i = 0; i < 5; i++){
         document.getElementById(`color${i + 1}`).style.backgroundColor = colors[i]
     }
