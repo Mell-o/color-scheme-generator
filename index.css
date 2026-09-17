@@ -126,6 +126,13 @@ li {
     justify-content: center;
     align-items: center;
     height: 8%;
+    border: none;
+    width: 100%;
+}
+
+.hex-label:hover {
+    cursor: pointer;
+    color: rgb(149, 42, 92);
 }
 
 #color1 {
