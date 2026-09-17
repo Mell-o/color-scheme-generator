@@ -179,10 +179,9 @@ li {
     bottom: 10%;
     margin: auto;
     width: fit-content;
-    height: 30px;
     background-color: darkolivegreen;
     color: white;
-    padding: 20px;
+    padding: 0 20px;
     border-radius: 24px;
-    animation: slideUp 0.4s ease-out forwards;
+    animation: slideUp 0.4s ease-out;
 }
