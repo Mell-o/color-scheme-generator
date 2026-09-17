@@ -110,6 +110,7 @@ ul, .hex-label {
 ul {
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
 li {
@@ -152,4 +153,36 @@ li {
 
 #color5 {
     background-color: #A626D3;
+}
+
+/* =================
+    Success Modal
+   ================= */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;            
+  }
+}
+
+.success-modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: auto;
+    width: fit-content;
+    height: 30px;
+    background-color: darkolivegreen;
+    color: white;
+    padding: 20px;
+    border-radius: 24px;
+    animation: slideUp 0.4s ease-out forwards;
 }

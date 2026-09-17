@@ -64,6 +64,10 @@ const hexLabels = document.querySelectorAll(".hex-label")
 hexLabels.forEach(hexLabel => {
     hexLabel.addEventListener("click", (event) => {
         navigator.clipboard.writeText(event.target.innerText)
+        document.querySelector(".success-modal").style.display = "flex"
+        setTimeout(function(){
+            document.querySelector(".success-modal").style.display = "none"
+        }, 3000)
     })
 })
 
