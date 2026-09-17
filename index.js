@@ -59,5 +59,13 @@ function displayHexes(colors){
     }
 }
 
+const hexLabels = document.querySelectorAll(".hex-label")
+
+hexLabels.forEach(hexLabel => {
+    hexLabel.addEventListener("click", (event) => {
+        navigator.clipboard.writeText(event.target.innerText)
+    })
+})
+
 
 addSchemeModes(schemeModes)
