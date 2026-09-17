@@ -63,6 +63,10 @@ button {
     background-color: white;
 }
 
+.submit-btn:hover, select:hover {
+    background-color: #EAE1E1;
+}
+
 input {
     width: 8%;
     margin: 0 auto;
