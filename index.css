@@ -1,6 +1,25 @@
+:root {
+    --main-ft-color: #2B283A;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+/* =================
+    Typography
+   ================= */
+   body, button {
+        color: var(--main-ft-color);
+        font-family: "Inter", sans-serif;
+        font-size: clamp(0.75rem, 1vw + 6px, 1rem);
+        font-weight: 600;
+    }
+
+    .hex-label {
+        font-weight: 500;
+    }
+
 
 /* =================
     Main content
