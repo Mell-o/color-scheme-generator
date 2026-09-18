@@ -1,5 +1,9 @@
 :root {
     --main-ft-color: #2B283A;
+    --hover-color: rgb(214, 212, 212);
+    --form-border-color: #D1D5DB;
+    --select-picker-icon-color: #9CA3AF;
+    --hex-label-hover-color: rgb(149, 42, 92);
 }
 
 *, *::before, *::after {
@@ -69,7 +73,7 @@ form {
 
 form > * {
     height: 42px;
-    border: 1px solid #D1D5DB;
+    border: 1px solid var(--form-border-color);
 }
 
 button, input, select {
@@ -83,7 +87,7 @@ button {
 }
 
 .submit-btn:hover, select:hover {
-    background-color: #EAE1E1;
+    background-color: var(--hover-color);
 }
 
 input {
@@ -96,7 +100,7 @@ select, ::picker(select) {
 }
 
 select::picker-icon {
-    color: #9CA3AF;
+    color: var(--select-picker-icon-color);
 }
 
 select {
@@ -156,7 +160,7 @@ li {
 
 .hex-label:hover {
     cursor: pointer;
-    color: rgb(149, 42, 92);
+    color: var(--hex-label-hover-color);
 }
 
 #color1 {
